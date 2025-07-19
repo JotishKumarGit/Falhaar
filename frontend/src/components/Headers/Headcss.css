@@ -1,0 +1,32 @@
+/* Initially hide navbar above the viewport */
+.hidden-top {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* Slide down animation */
+.slide-down {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* Optional: customize colors */
+.custom-navbar {
+  background-color: #f8f9fa; /* light bg */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand-custom {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.custom-nav-link {
+  font-weight: 500;
+}
+
+.custom-nav-link:hover {
+  color: #007bff !important;
+}

@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+;
+
+/* This is for card  */
+.overlap-card {
+  margin-top: -80px;
+  /* Adjust to control how much it overlaps */
+  z-index: 1050;
+  background-color: white;
+  border-radius: 12px;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
