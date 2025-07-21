@@ -3,6 +3,8 @@ import React from 'react';
 import about_img from '../assets/about-img.avif';
 import { TiChevronRight } from "react-icons/ti";
 import { Col } from 'react-bootstrap';
+import fruits from '../assets/fruits.jpg';
+
 
 const About = () => {
   return (
@@ -12,18 +14,14 @@ const About = () => {
           <div className="text-center">
             <h2 className="about-title mb-4">Who We Are</h2>
             <p className="about-description mx-auto mb-4">
-              At <strong>Unique</strong>, we believe that being different isn’t just a choice — it’s a way of life.
-              Founded on the principles of creativity, innovation, and authenticity, we strive to deliver products and
-              solutions that stand out in a crowded world.
+              Welcome to Falhaar, your trusted destination for fresh vegetables, nutritious makhana, and handpicked fruits – all delivered straight from farms to your doorstep.
             </p>
           </div>
           {/* Text Content */}
           <div className="col-lg-6 text-center text-lg-start py-2 animate__animated animate__fadeInLeft">
             <h2 className="fw-bold mb-3">About Us</h2>
             <p className="lead">
-              I'm not just another developer or creator — I'm a storyteller, a problem solver, and an innovator.
-              From ideas to execution, every step reflects my originality and vision.
-              In a world full of templates, I build with purpose and passion.
+              At the heart of our mission is a simple belief: freshness is the foundation of health. We work closely with local farmers and organic growers to ensure that every product we offer is pure, clean, and packed with natural goodness.
             </p>
             <ul className=' text-start'>
               <li className='list-unstyled' ><TiChevronRight />We Are Supplier</li>
@@ -38,7 +36,7 @@ const About = () => {
 
           {/* Image or Illustration */}
           <div className="col-lg-6 text-center animate__animated animate__fadeInRight">
-            <img src={about_img} alt="Unique Illustration" className="img-fluid rounded shadow" />
+            <img src={fruits} alt="Unique Illustration" className="img-fluid rounded shadow" />
           </div>
         </div>
       </div>

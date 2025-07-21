@@ -5,8 +5,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Headers/Header';
 import Footer from './components/Headers/Footer';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
+import Contact from './pages/MorePro/Contact_us';
 import { ThemeProvider } from './context/ThemeContext';
+import About from './pages/MorePro/About_Us';
+import Services from './pages/MorePro/Services';
+import MoreProduct from './pages/MorePro/MoreProduct';
 
 
 function App() {
@@ -18,6 +21,9 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/products' element={<MoreProduct />} />
+          <Route path='/services' element={<Services />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
         <Footer />

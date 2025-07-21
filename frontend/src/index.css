@@ -8,30 +8,18 @@
 
 /* This is for card  */
 .overlap-card {
+  position: relative;
   margin-top: -80px;
   /* Adjust to control how much it overlaps */
   z-index: 1050;
   background-color: white;
   border-radius: 12px;
-  position: relative;
+
 }
 
+;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.card-section-wrapper {
+  position: relative;
+  z-index: 2;
+}
