@@ -13,22 +13,34 @@ import { Modal, Button } from 'react-bootstrap';
 
 const products = [
   {
+    id: 1,
+    name: 'Tandoori Makhana',
+    image: makhana_3,
+    description: 'Marinated in a tandoori-style spice mix and roasted.',
+  },
+  {
     id: 2,
     name: 'Fresh Fruits',
     image: fruits,
     description: 'Nature’s Sweetest Gift – Fresh Fruits',
   },
   {
-    id: 1,
-    name: 'Makhana',
-    image: makhana_3,
-    description: 'Crunch Made Healthy – Premium Roasted Makhana.',
-  },
-  {
     id: 3,
+    name: 'Peri-Peri Makhana ',
+    image: makhana_2,
+    description: 'Spicy with a tangy twist using peri-peri seasoning.',
+  },
+   {
+    id: 4,
     name: 'Vegitable',
     image: vegitables,
     description: 'Farm Fresh Goodness – Daily Picked Veggies',
+  },
+  {
+    id: 5,
+    name: 'Masala Makhana',
+    image: makhana_4,
+    description: 'Made with chaat masala, turmeric, red chilli powder, and cumin.',
   },
 
 ];

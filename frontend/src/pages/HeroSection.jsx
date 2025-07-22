@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import img_2 from '../assets/fruits.jpg';
+import img_1 from '../assets/makhana-2.webp';
+import img_2 from '../assets/makhana.jpg';
 import img_3 from '../assets/makhana-3.jpg';
-import img_1 from '../assets/vegitable-Image-1.jpg';
+import img_4 from '../assets/vegitable-Image-1.jpg';
+import img_5 from '../assets/fruits.jpg';
 
 
 // const slides = [

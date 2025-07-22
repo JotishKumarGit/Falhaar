@@ -1,3 +1,35 @@
+/* This is for card sections  */
+.overlap-card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--bs-light);
+}
+
+.overlap-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.overlap-card .card-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--bs-primary);
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* This is for about sections  */
 .about-section {
   background: linear-gradient(135deg, #f3f4f6, #ffffff);
