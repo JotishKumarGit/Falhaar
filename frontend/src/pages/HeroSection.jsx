@@ -1,69 +1,76 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Container, Button } from 'react-bootstrap';
-import { ThemeContext } from '../context/ThemeContext';
+import img_2 from '../assets/fruits.jpg';
+import img_3 from '../assets/makhana-3.jpg';
+import img_1 from '../assets/vegitable-Image-1.jpg';
 
-const slides = [
-  {
-    title: "Premium Roasted Makhana (Fox Nuts) – 100% Natural & Crunchy",
-    subtitle:
-      "Enjoy a healthy, guilt-free snack with our premium quality roasted makhana. Sourced from trusted farms, these fox nuts are rich in protein, calcium, and antioxidants. Perfect for weight watchers, fitness enthusiasts, or as an evening snack.",
-    buttonText: "Start your project",
-  },
-  {
-    title: " Farm-Fresh Mixed Vegetables – Daily Harvested ",
-    subtitle:
-      "Our fresh vegetable pack includes seasonal greens handpicked from local farms every morning. From crunchy cucumbers to vibrant carrots and leafy spinach – get the best of nature’s bounty with zero preservatives.",
-    buttonText: "Learn More",
-  },
-  {
-    title: " Handpicked Fresh Fruits – Juicy & Naturally Sweet",
-    subtitle:
-      "Taste the freshness with our assorted fresh fruits box including apples, bananas, papayas, and seasonal specials. All fruits are hand-selected for ripeness and taste, ensuring premium quality delivered to your doorstep.",
-    buttonText: "Contact Us",
-  },
-];
+
+// const slides = [
+//   {
+//     title: "Premium Roasted Makhana (Fox Nuts) – 100% Natural & Crunchy",
+//     subtitle:
+//       "Enjoy a healthy, guilt-free snack with our premium quality roasted makhana. Sourced from trusted farms, these fox nuts are rich in protein, calcium, and antioxidants. Perfect for weight watchers, fitness enthusiasts, or as an evening snack.",
+//     buttonText: "Start your project",
+//   },
+//   {
+//     title: " Farm-Fresh Mixed Vegetables – Daily Harvested ",
+//     subtitle:
+//       "Our fresh vegetable pack includes seasonal greens handpicked from local farms every morning. From crunchy cucumbers to vibrant carrots and leafy spinach – get the best of nature’s bounty with zero preservatives.",
+//     buttonText: "Learn More",
+//   },
+//   {
+//     title: " Handpicked Fresh Fruits – Juicy & Naturally Sweet",
+//     subtitle:
+//       "Taste the freshness with our assorted fresh fruits box including apples, bananas, papayas, and seasonal specials. All fruits are hand-selected for ripeness and taste, ensuring premium quality delivered to your doorstep.",
+//     buttonText: "Contact Us",
+//   },
+// ];
 
 function HeroSection() {
-  const { darkMode } = useContext(ThemeContext);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
-    <div
-      className={`hero-section d-flex align-items-center  ${darkMode ? 'bg-dark text-light' : 'bg-light text-dark'}`}
-    >
-      <Container className="text-center overflow-hidden" style={{ height: '300px', }}
-      >
-        <div className="slides-wrapper d-flex" style={{ width: `${slides.length * 100}%`, transform: `translateX(-${(100 / slides.length) * currentSlide}%)`, transition: 'transform 0.8s ease-in-out', height: '100%', }}>{slides.map((slide, idx) => (
-          <div key={idx} className="slide" style={{ flex: `0 0 ${100 / slides.length}%`, padding: '20px', }}>
-            <h1 className="fw-bold" style={{ fontSize: '2rem', lineHeight: '2.2rem', }}>
-              {slide.title}
-            </h1>
-            <p
-              className="lead mt-3" style={{ fontSize: '1rem', lineHeight: '1.4rem', }}>
-              {slide.subtitle}
-            </p>
-            <div>
-              <Button
-                variant={darkMode ? 'light' : 'primary'}
-                size="lg"
-                className="btn-gradient mt-4 text-center align-items-center justify-content-center"
-                style={{ padding: '10px', fontSize: '1rem', height: '50px', minWidth: '200px', }}>
-                {slide.buttonText}
-              </Button>
+
+    <>
+      <div id="carouselExampleCaptions" className="carousel slide">
+        <div className="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={0} className="active" aria-current="true" aria-label="Slide 1" />
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={1} aria-label="Slide 2" />
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={2} aria-label="Slide 3" />
+        </div>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={img_1} className="d-block w-100" alt="..." style={{ height: '400px', objectFit: 'cover', backgroundPosition: 'center' }} />
+            <div className="carousel-caption d-none d-md-block">
+              {/* <h3 className='fw-bold'>Premium Roasted Makhana (Fox Nuts) – 100% Natural & Crunchy</h3>
+              <p className='fw-bold'>Some representative placeholder content for the first slide.</p> */}
             </div>
           </div>
-        ))}
+          <div className="carousel-item">
+            <img src={img_2} className="d-block w-100" alt="..." style={{ height: '400px', objectFit: 'cover', backgroundPosition: 'center' }} />
+            <div className="carousel-caption d-none d-md-block">
+              {/* <h3 className='fw-bold'>Farm-Fresh Mixed Vegetables – Daily Harvested</h3>
+              <p className='fw-bold'>Our fresh vegetable pack includes seasonal greens handpicked from local farms every morning. From crunchy cucumbers to vibrant carrots and leafy spinach – get the best of nature’s bounty with zero preservatives."</p> */}
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img src={img_3} className="d-block w-100" alt="" style={{ height: '400px', objectFit: 'cover', backgroundPosition: 'center' }} />
+            <div className="carousel-caption d-none d-md-block">
+              {/* <h3 className='fw-bold'>Handpicked Fresh Fruits – Juicy & Naturally Sweet</h3>
+              <p className='fw-bold'>Taste the freshness with our assorted fresh fruits box including apples, bananas, papayas, and seasonal specials. All fruits are hand-selected for ripeness and taste, ensuring premium quality delivered to your doorstep."</p> */}
+            </div>
+          </div>
         </div>
-      </Container>
-    </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true" />
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+    </>
   );
 }
 
 export default HeroSection;
+

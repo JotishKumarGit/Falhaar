@@ -1,24 +1,3 @@
-/* This is for hero sections  */
-
-.hero-section {
-  background-image: url('../assets//vegitables.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 300px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Optional: to make sure content is visible */
-.hero-section .slide {
-  color: white;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 /* This is for about sections  */
 .about-section {
   background: linear-gradient(135deg, #f3f4f6, #ffffff);
