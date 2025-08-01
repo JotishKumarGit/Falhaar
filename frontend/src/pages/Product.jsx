@@ -18,24 +18,24 @@ const products = [
     image: makhana_3,
     description: 'Marinated in a tandoori-style spice mix and roasted.',
   },
-  {
-    id: 2,
-    name: 'Fresh Fruits',
-    image: fruits,
-    description: 'Nature’s Sweetest Gift – Fresh Fruits',
-  },
+  // {
+  //   id: 2,
+  //   name: 'Fresh Fruits',
+  //   image: fruits,
+  //   description: 'Nature’s Sweetest Gift – Fresh Fruits',
+  // },
   {
     id: 3,
     name: 'Peri-Peri Makhana ',
     image: makhana_2,
-    description: 'Spicy with a tangy twist using peri-peri seasoning.',
+    description: 'Spicy with a tangy twist using peri-peri test seasoning.',
   },
-   {
-    id: 4,
-    name: 'Vegitable',
-    image: vegitables,
-    description: 'Farm Fresh Goodness – Daily Picked Veggies',
-  },
+  //  {
+  //   id: 4,
+  //   name: 'Vegitable',
+  //   image: vegitables,
+  //   description: 'Farm Fresh Goodness – Daily Picked Veggies',
+  // },
   {
     id: 5,
     name: 'Masala Makhana',
@@ -92,7 +92,7 @@ const Product = () => {
               <div className="col-md-3 text-center" key={product.id} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card product-card h-100 shadow-sm border-0">
                   <img src={product.image} className="card-img-top" alt={product.name} height={'200px'} />
-                  <div className="card-body">
+                  <div className="card-body h-100">
                     <h5 className="card-title">{product.name}</h5>
                     <p className="card-text text-muted">{product.description}</p>
                     <div className='gap-2'>
