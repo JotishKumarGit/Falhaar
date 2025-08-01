@@ -1,52 +1,86 @@
-import React, { useEffect, useState, useContext } from 'react';
-import './Headcss.css';
-import { ThemeContext } from '../../context/ThemeContext';
+import React, { useState } from 'react';
+import {Row,Col,Navbar,Container,Offcanvas,Button,Nav, NavDropdown  } from 'react-bootstrap';
+import { MdOutlineMailOutline } from 'react-icons/md';
+import { FaPhone } from 'react-icons/fa6';
+import { TiThMenu } from 'react-icons/ti';
+import './Headcss.css'
 
-const Header = () => {
-    const { darkMode, toggleTheme } = useContext(ThemeContext);
-    const [isVisible, setIsVisible] = useState(false);
+function Header() {
+  const [show, setShow] = useState(false);
 
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-    return (
-        <div className={`${darkMode ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
-            <nav
-                className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark bg-dark' : 'navbar-light bg-light'} custom-navbar ${isVisible ? 'slide-down' : 'hidden-top'}`}
-                style={{ position: 'sticky', top: 0, zIndex: 1030 }}
-            >
-                <div className="container">
-                    <a className="navbar-brand navbar-brand-custom" href="/">FALHAAR</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a className=" nav-link custom-nav-link" href="/">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link custom-nav-link" href="/about">About</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link custom-nav-link" href="/products">Products</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link custom-nav-link" href="/services">Services</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link custom-nav-link" href="/contact">Contact</a>
-                            </li>
-                        </ul>
-                        <button className="btn btn-outline-primary ms-3" onClick={toggleTheme}>
-                            Toggle {darkMode ? 'Light' : 'Dark'} Mode
-                        </button>
-                    </div>
-                </div>
-            </nav>
+  return (
+    <>
+      {/* Top Bar */}
+      <div className="sliding-banner-wrapper" style={{ backgroundColor: '#9600ff' }}>
+      <div className="sliding-banner">
+        <div className="text-light py-2" >
+          <Container>
+            <Row className="align-items-center">
+              <Col md={6} sm={12}>
+                <small>
+                  <strong>Opening Hours:</strong> Mon - Sat: 9.00 am - 9.00 pm, Sunday Closed
+                </small>
+              </Col>
+              <Col md={6} sm={12} className="text-md-end text-sm-start mt-sm-2 mt-md-0">
+                <small>
+                  <MdOutlineMailOutline /> <strong>Email:</strong>{' '}
+                  <a href="mailto:info@example.com" className="text-light">
+                    arifcarpets038@gmail.com
+                  </a>{' '}
+                  &nbsp;&nbsp;
+                  <FaPhone /> <strong>Call:</strong>{' '}
+                  <a href="tel:+1234567890" className="text-light">
+                    +91 7905951309
+                  </a>
+                </small>
+              </Col>
+            </Row>
+          </Container>
         </div>
-    );
-};
+      </div>
+    </div>
+
+      {/* Bottom Navbar */}
+      <div className="container-fluid " style={{backgroundColor:'#e33675'}}>
+      <div className="container">
+        <Navbar  expand={false}>
+          <Container fluid>
+            {/* Left: Logo */}
+            <Navbar.Brand href="#" className='text-white'>Falhaar</Navbar.Brand>
+
+            {/* Right: Hamburger Icon Button */}
+            <Button variant="light"onClick={handleShow}className="border-0"aria-label="Toggle menu">
+              <TiThMenu size={28} />
+            </Button>
+
+            {/* Offcanvas from right */}
+            <Offcanvas show={show} onHide={handleClose} placement="end">
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>Menu</Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="flex-column">
+                  <Nav.Link href="#home">Home</Nav.Link>
+                  <Nav.Link href="#about">About</Nav.Link>
+                  <NavDropdown title="Services" id="offcanvas-nav-dropdown">
+                    <NavDropdown.Item href="#action/1">Service 1</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/2">Service 2</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3">Separated link</NavDropdown.Item>
+                  </NavDropdown>
+                  <Nav.Link href="#contact">Contact</Nav.Link>
+                </Nav>
+              </Offcanvas.Body>
+            </Offcanvas>
+          </Container>
+        </Navbar>
+      </div>     
+      </div>
+    </>
+  );
+}
 
 export default Header;

@@ -74,6 +74,7 @@ const Faq = () => {
     );
 
     return (
+        <div className="container-fluid py-3" style={{backgroundColor:'#eceaecff'}}>
         <div className="container my-5">
             <h2 className="text-center mb-4">❓ Frequently Asked Questions</h2>
             <div className="row">
@@ -88,6 +89,7 @@ const Faq = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

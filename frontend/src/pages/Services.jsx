@@ -29,7 +29,8 @@ const Service = () => {
   }, []);
 
   return (
-    <div className="container py-5">
+    <div className="container-fluid" style={{backgroundColor:'#9eb633ff'}}>
+    <div className="container py-5"  >
       <div className="text-center mb-5" data-aos="fade-down">
         <h2 className="fw-bold">Our Services</h2>
         <p className="text-muted para-p">
@@ -55,6 +56,7 @@ const Service = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

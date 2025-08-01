@@ -30,3 +30,25 @@
 .custom-nav-link:hover {
   color: #007bff !important;
 }
+
+/* This is topbar slider  */
+.sliding-banner-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.sliding-banner {
+  display: inline-block;
+  min-width: 100%;
+  animation: slideBanner 15s linear infinite;
+}
+
+@keyframes slideBanner {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

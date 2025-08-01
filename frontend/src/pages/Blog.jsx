@@ -5,6 +5,8 @@ import blog_3 from '../assets/blog_6.jpg';
 
 
 const Blog = () => {
+
+
     const blogPosts = [
         {
             id: 1,
@@ -33,7 +35,7 @@ const Blog = () => {
     ];
 
     return (
-        <div className="container-fluid py-3" style={{ backgroundColor: '#e3e7eeff' }}>
+        <div className="container-fluid py-3" style={{ backgroundColor: '#fdff72ff' }}>
             <div className="container my-5">
                 <h2 className="mb-4 text-center">Latest Blog Posts</h2>
                 <p className='text-center mb-4'>

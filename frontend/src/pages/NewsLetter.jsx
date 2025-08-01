@@ -14,7 +14,7 @@ const Newsletter = () => {
     };
 
     return (
-        <div className="container-fluid py-5" style={{backgroundColor:'#bac0c5ff'}}>
+        <div className="container-fluid py-5" style={{backgroundColor:'#e3e7eeff'}}>
             <div className="container my-5">
                 <div className="row justify-content-center">
                     <div className="col-md-8">

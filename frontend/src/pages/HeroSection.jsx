@@ -40,21 +40,21 @@ function HeroSection() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={img_1} className="d-block w-100" alt="..." style={{ height: '400px', objectFit: 'cover', backgroundPosition: 'center' }} />
+            <img src={img_1} className="d-block w-100" alt="..." style={{ height: '600px', objectFit: 'cover', backgroundPosition: 'center' }} />
             <div className="carousel-caption d-none d-md-block">
               {/* <h3 className='fw-bold'>Premium Roasted Makhana (Fox Nuts) – 100% Natural & Crunchy</h3>
               <p className='fw-bold'>Some representative placeholder content for the first slide.</p> */}
             </div>
           </div>
           <div className="carousel-item">
-            <img src={img_2} className="d-block w-100" alt="..." style={{ height: '400px', objectFit: 'cover', backgroundPosition: 'center' }} />
+            <img src={img_2} className="d-block w-100" alt="..." style={{ height: '600px', objectFit: 'cover', backgroundPosition: 'center' }} />
             <div className="carousel-caption d-none d-md-block">
               {/* <h3 className='fw-bold'>Farm-Fresh Mixed Vegetables – Daily Harvested</h3>
               <p className='fw-bold'>Our fresh vegetable pack includes seasonal greens handpicked from local farms every morning. From crunchy cucumbers to vibrant carrots and leafy spinach – get the best of nature’s bounty with zero preservatives."</p> */}
             </div>
           </div>
           <div className="carousel-item">
-            <img src={img_3} className="d-block w-100" alt="" style={{ height: '400px', objectFit: 'cover', backgroundPosition: 'center' }} />
+            <img src={img_3} className="d-block w-100" alt="" style={{ height: '600px', objectFit: 'cover', backgroundPosition: 'center' }} />
             <div className="carousel-caption d-none d-md-block">
               {/* <h3 className='fw-bold'>Handpicked Fresh Fruits – Juicy & Naturally Sweet</h3>
               <p className='fw-bold'>Taste the freshness with our assorted fresh fruits box including apples, bananas, papayas, and seasonal specials. All fruits are hand-selected for ripeness and taste, ensuring premium quality delivered to your doorstep."</p> */}
