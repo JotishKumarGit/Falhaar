@@ -28,10 +28,10 @@ const Contact = () => {
 
   return (
     <>
-      <div className='container-fluid'>
+      <div className='container-fluid' style={{backgroundColor:'#fff'}}>
         <div className="container shadow-lg p-5 justify-content-center rounded" data-aos="fade-up">
-          <h2 className="text-center mb-3">Contacṭ Us</h2>
-          <p className='text-muted text-center para-p'>We’re here to help you find the perfect leggings solutions for your business. Whether you’re a supplier, buyer, or manufacturer, our team is ready to assist you with inquiries, orders, or custom requests.</p>
+          <h2 className="text-center text-white mb-3">Contacṭ Us</h2>
+          <p className=' text-white text-center para-p'>We’re here to help you find the perfect leggings solutions for your business. Whether you’re a supplier, buyer, or manufacturer, our team is ready to assist you with inquiries, orders, or custom requests.</p>
           <div className="row g-4">
             {/* Left Side: Map */}
             <div className="col-md-6 mt-5">

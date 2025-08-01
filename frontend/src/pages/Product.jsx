@@ -83,13 +83,13 @@ const Product = () => {
 
   return (
     <>
-      <section className="py-5 product-section bg-product">
+      <section className="py-5 product-section " style={{background: 'linear-gradient(45deg, #9600ff, #eceaeaff)' }}>
         <div className="container ">
           <h2 className="text-center fw-bold">Our Products</h2>
           <p className='text-center py-3'>Discover the perfect blend of taste and nutrition with our Premium Roasted Makhana. Made from handpicked lotus seeds, these light and crunchy fox nuts are roasted to perfection without any added preservatives or artificial flavors. </p>
           <div className="row justify-content-center align-items-center g-4">
             {products.map((product, index) => (
-              <div className="col-md-4 text-center" key={product.id} data-aos="fade-up" data-aos-delay={index * 100}>
+              <div className="col-md-3 text-center" key={product.id} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card product-card h-100 shadow-sm border-0">
                   <img src={product.image} className="card-img-top" alt={product.name} height={'200px'} />
                   <div className="card-body">

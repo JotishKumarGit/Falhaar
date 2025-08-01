@@ -2,23 +2,28 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import img_1 from '../assets/testimonials_img_1.jpg';
+import img_2 from '../assets/testimonials_img_2.jpg';
+import img_3 from '../assets/testimonials_img_3.jpg';
+
+
 const testimonials = [
     {
         name: 'Lewis Johnson',
         title: 'Marketing Director',
-        image: 'https://randomuser.me/api/portraits/women/44.jpg',
+        image: img_1,
         quote: 'This service exceeded all expectations. Professional, fast, and reliable!',
     },
     {
         name: 'Marks Stonis',
         title: 'CEO, Techify',
-        image: 'https://randomuser.me/api/portraits/men/32.jpg',
+        image: img_2,
         quote: 'Our productivity has increased thanks to this amazing tool!',
     },
     {
         name: 'Elflas Semi',
         title: 'UX Designer',
-        image: 'https://randomuser.me/api/portraits/women/65.jpg',
+        image: img_3,
         quote: 'Clean design and easy to use. Highly recommended!',
     },
 ];
@@ -29,7 +34,7 @@ const Testimonial = () => {
     }, []);
 
     return (
-        <div className="container-fluid" style={{backgroundColor:'rgba(240, 240, 240, 0.8)'}}>
+        <div className="container-fluid" style={{backgroundColor:'rgba(69, 160, 75, 0.8)'}}>
             <div className="container py-5 background_imgae" id="testimonials" >
                 <h2 className="text-center mb-2">What Our Clients Say</h2>
                 <p className="para-p text-muted justify-content-center text-center align-items-center">Hear from our valued partners across the leggings supply chain — from trusted suppliers and global buyers to innovative manufacturers — who rely on our seamless service and product quality.</p>

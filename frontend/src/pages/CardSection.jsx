@@ -5,7 +5,6 @@ import { IoIosArrowForward } from "react-icons/io";
 
 function CardSection() {
 
-    const { darkMode, toggleTheme } = useContext(ThemeContext);
 
     const data = [
         {
@@ -30,29 +29,29 @@ function CardSection() {
     ]
 
     return (
-        <div className="card-section-wrapper bg-light position-relative" style={{ zIndex: '1', marginTop: '-20px' }} >
+        <div className="card-section-wrapper position-relative" style={{background: 'linear-gradient(45deg, #df3a8c, #9600ff)'  ,zIndex: '1', marginTop: '-20px' }} >
             <Container>
                 <Row className="justify-content-center ">
                     <Col md={12}>
                         <Row className="justify-content-center mt-n5"> {/* Negative top margin for overlap */}
                             {data.map((item, index) => (
                                 <Col md={4} className="mb-4 fade-in-up" key={index}>
-                                    <Card className={`overlap-card shadow-lg p-4 text-center ${darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`}>
+                                    <Card className='overlap-card shadow-lg p-4 text-center' style={{backgroundColor:'#9600ff' ,}}>
                                         <Card.Body className='h-100'>
-                                            <Card.Title className="h4">{item.title}</Card.Title>
+                                            <Card.Title className="h4 text-white">{item.title}</Card.Title>
 
-                                            <div className="d-flex align-items-start mb-2 text-start">
-                                                <IoIosArrowForward className="me-2 mt-1" />
+                                            <div className="d-flex align-items-start mb-2 text-white text-start">
+                                                <IoIosArrowForward className="me-2 text-white mt-1" />
                                                 <span>{item.description1}</span>
                                             </div>
 
-                                            <div className="d-flex align-items-start mb-2 text-start">
-                                                <IoIosArrowForward className="me-2 mt-1" />
+                                            <div className="d-flex align-items-start text-white mb-2 text-start">
+                                                <IoIosArrowForward className="me-2 text-white mt-1" />
                                                 <span>{item.description2}</span>
                                             </div>
 
-                                            <div className="d-flex align-items-start text-start">
-                                                <IoIosArrowForward className="me-2 mt-1" />
+                                            <div className="d-flex align-items-start text-white text-start">
+                                                <IoIosArrowForward className="me-2 text-white mt-1" />
                                                 <span>{item.description3}</span>
                                             </div>
                                         </Card.Body>

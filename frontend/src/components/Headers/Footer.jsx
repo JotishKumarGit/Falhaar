@@ -1,23 +1,16 @@
 import React from 'react';
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaEnvelope
+import {  FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaMapMarkerAlt,FaPhoneAlt, FaEnvelope
 } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="footer bg-dark text-light pt-5 pb-4 mt-auto">
+    <footer className="footer text-light pt-5 pb-4 mt-auto " style={{backgroundColor:'#1f1e1aff'}}>
       <div className="container">
         <div className="row">
 
           {/* Brand & Description */}
           <div className="col-md-4 mb-4">
-            <h4 className="fw-bold text-primary">BrandName</h4>
+            <h4 className="fw-bold text-primary">Falhaar</h4>
             <p className="text-white  ">
               We are dedicated to providing the best service with quality and trust.
               Stay connected with us for updates and promotions.
